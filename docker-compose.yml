@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+    jenkins:
+      image: jenkinsci/blueocean
+      ports:
+        - "9090:8080"
