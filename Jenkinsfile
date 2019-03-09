@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:8.15.1-jessie'
-        }
-    }
+    agent any
     stages {
         stage('build') {
             input {
