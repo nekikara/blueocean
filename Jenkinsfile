@@ -1,7 +1,14 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:8-jessie'
+        }
+    }
     stages {
-        stage('build') {
+        stage('deploy') {
+            when {
+                branch 'deploy'
+            }
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
