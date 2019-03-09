@@ -5,6 +5,11 @@ pipeline {
         }
     }
     stages {
+        stage('all') {
+            steps {
+                echo 'node -v'
+            }
+        }
         stage('deploy') {
             when {
                 branch 'deploy'
