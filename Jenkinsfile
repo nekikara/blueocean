@@ -8,6 +8,7 @@ pipeline {
         }
         stage('deploy') {
             when {
+                beforeInput true
                 branch 'deploy'
             }
             input {
