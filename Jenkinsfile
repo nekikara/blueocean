@@ -1,13 +1,9 @@
 pipeline {
-    agent any
-    parameters {
-        choice(name: 'DEPLOY_ENV', choices: 'staging\nproduction', description: 'which deploy environment?')
-        text(name: 'BIOGRAPHY', description: 'Enter some information about the person')
-    }
+    agent { docker { image 'node:6.3' } }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                echo "Build ${params.DEPLOY_ENV}"
+                sh 'npm --version'
             }
         }
     }
