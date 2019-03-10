@@ -7,4 +7,4 @@ image_resource:
 
 run:
   path: echo
-  args: [hello my repository triggered]
+  args: [hello my repository triggered really]
